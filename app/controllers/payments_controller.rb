@@ -4,6 +4,10 @@ class PaymentsController < ApplicationController
     @payments = Payment.where('author_id=?', current_user.id)
   end
 
+  def new
+    @payment = Payment.new
+  end
+
   private
 
   def logged_in_or_back

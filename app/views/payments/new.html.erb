@@ -1,0 +1,14 @@
+<%= render 'layouts/header'%>
+<div class="card my-3 text-center">
+  <div class="card-body px-5">
+    <%= form_with method: @payment, local: true do |f| %>
+      <div class="md-form my-3">
+        <%= f.text_field :name, class: 'form-control border-right-0 border-left-0 rounded-0', placeholder: 'Name'%>
+      </div>
+      <div class="md-form my-3">
+        <%= f.number_field :amount, class: 'form-control border-right-0 border-left-0 rounded-0', placeholder: 'Amount'%>
+      </div>
+      <%= f.submit 'Submit Payment', class: 'btn btn-primary mt-3' %>
+    <% end %>
+  </div>
+</div>
