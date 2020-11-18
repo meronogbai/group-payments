@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(name: params[:name])
     if @user.save
       flash[:notice] = 'Successful Sign Up'
+      log_in @user
       redirect_to @user
     else
       flash[:alert] = 'Please use a different name'
