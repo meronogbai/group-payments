@@ -14,4 +14,12 @@ class UsersController < ApplicationController
       redirect_back(fallback_location: signup_path)
     end
   end
+
+  def show
+    user = User.find(params[:id])
+    return if logged_in? && current_user == user
+
+    flash[:alert] = 'Access not allowed. Please login as this user first'
+    redirect_to root_url
+  end
 end

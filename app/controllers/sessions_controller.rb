@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if user
       log_in user
       flash[:notice] = 'Successful Login'
-      redirect_to root_url
+      redirect_to user
     else
       flash[:alert] = 'Invalid Name'
       redirect_back(fallback_location: root_url)

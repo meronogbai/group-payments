@@ -6,23 +6,19 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
   <body>
     <nav class="navbar navbar-dark bg-primary">
       <%= link_to 'Home', root_path, class: 'navbar-brand' %>
-      <div class="navbar-nav">
-        <%= link_to 'Logout', '#', class: 'nav-link'%>
-      </div>
+      <ul class="navbar-nav">
+        <li class='nav-item'>
+          <%= link_to 'Profile', '#', class: 'nav-link'%>
+        </li>
+      </ul>
     </nav>
-    <% if notice.present? %>
-      <div class="notice">
-        <p> <%= notice %> </p>
-      </div>
-    <% end %>
-    <% if alert.present? %>
-      <div class="alert">
-        <p> <%= alert %> </p>
-      </div>
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: "alert-#{type}" %>
     <% end %>
     <%= yield %>
   </body>
