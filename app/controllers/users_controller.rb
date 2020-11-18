@@ -6,11 +6,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:user][:name])
     if @user.save
-      flash[:notice] = 'Successful Sign Up'
+      flash[:success] = 'Successful Sign Up'
       log_in @user
       redirect_to @user
     else
-      flash[:alert] = 'Please use a different name'
+      flash[:danger] = 'Please use a different name'
       redirect_back(fallback_location: signup_path)
     end
   end
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     return if logged_in? && current_user == @user
 
-    flash[:alert] = 'Access not allowed. Please login as this user first'
+    flash[:danger] = 'Access not allowed. Please login as this user first'
     redirect_to root_url
   end
 end

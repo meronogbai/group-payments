@@ -1,0 +1,8 @@
+<%= render 'layouts/header'%>
+<div class="card">
+  <div class="card-body d-flex justify-content-between">
+    <span>Total Amount</span>
+    <strong>$<%= total_payments(@payments) %></strong>
+  </div>
+</div>
+<%= render @payments %>

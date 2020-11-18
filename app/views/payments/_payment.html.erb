@@ -1,0 +1,9 @@
+<div class="card w-75 mx-auto my-3">
+  <div class="card-body d-flex justify-content-between">
+    <span><%= payment.name %></span>
+    <strong>$<%= payment.amount%></strong>
+  </div>
+  <div class="card-footer">
+    <%= payment.created_at.strftime("%d %b %Y") %>
+  </div>
+</div>
