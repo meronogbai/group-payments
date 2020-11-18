@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+.f-large {
+  font-size: 1.5rem;
+}

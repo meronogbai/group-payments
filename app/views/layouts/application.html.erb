@@ -4,12 +4,16 @@
     <title>GroupPayments</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar navbar-dark bg-primary">
+      <%= link_to 'Home', '#', class: 'navbar-brand' %>
+      <div class="navbar-nav">
+        <%= link_to 'Logout', '#', class: 'nav-link'%>
+      </div>
+    </nav>
     <% if notice.present? %>
       <div class="notice">
         <p> <%= notice %> </p>
