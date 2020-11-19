@@ -1,0 +1,8 @@
+<div class="card w-75 mx-auto my-3">
+  <div class="card-body d-flex justify-content-between">
+    <span><%= group.name %></span>
+  </div>
+  <div class="card-footer">
+    <strong>Created by <%= group.user.name %></strong> on <%= group.created_at.strftime("%d %b %Y") %>
+  </div>
+</div>

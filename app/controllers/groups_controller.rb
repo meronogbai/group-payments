@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :logged_in_or_back
 
   def index
-    @groups = Group.where('user_id=?', current_user.id)
+    @groups = Group.includes(:user).all
   end
 
   def new
