@@ -1,12 +1,18 @@
 <%= render 'layouts/header'%>
 <div class="card my-3 text-center">
   <div class="card-body px-5">
-    <%= form_with method: @payment, local: true do |f| %>
+    <%= form_with model: @payment, local: true do |f| %>
       <div class="md-form my-3">
-        <%= f.text_field :name, class: 'form-control border-right-0 border-left-0 rounded-0', placeholder: 'Name'%>
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
       </div>
       <div class="md-form my-3">
-        <%= f.number_field :amount, class: 'form-control border-right-0 border-left-0 rounded-0', placeholder: 'Amount'%>
+        <%= f.number_field :amount, class: 'form-control', placeholder: 'Amount'%>
+      </div>
+      <div class="input-group my-3">
+        <div class="input-group-prepend">
+          <%= f.label :group_id, class: 'input-group-text' %>
+        </div>
+        <%= f.collection_select(:group_id, Group.all, :id, :name, {include_blank: true}, {class: 'custom-select'}) %>
       </div>
       <%= f.submit 'Submit Payment', class: 'btn btn-primary mt-3' %>
     <% end %>

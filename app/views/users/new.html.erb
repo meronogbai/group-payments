@@ -3,7 +3,7 @@
   <div class="card-body px-5">
     <%= form_with model: @user, local: true do |f| %>
       <div class="md-form">
-        <%= f.text_field :name, class: 'form-control border-right-0 border-left-0 rounded-0', placeholder: 'Name'%>
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
       </div>
       <%= f.submit 'Signup', class: 'btn btn-primary mt-3' %>
     <% end %>
