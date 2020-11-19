@@ -17,19 +17,12 @@ class PaymentsController < ApplicationController
       flash[:success] = 'Payment added'
       redirect_to payments_path
     else
-      flash[:error] = 'Invalid payment'
-      redirect_back(fallback_location: payments_path)
+      flash[:danger] = 'Invalid payment'
+      redirect_back(fallback_location: new_payment_path)
     end
   end
 
   private
-
-  def logged_in_or_back
-    return if logged_in?
-
-    flash[:danger] = 'Please login to view your transactions'
-    redirect_to root_url
-  end
 
   def payment_params
     params.require(:payment).permit(:name, :amount)
