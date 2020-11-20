@@ -10,7 +10,7 @@
   </head>
   <body>
     <% flash.each do |type, msg| %>
-      <%= content_tag :div, msg, class: "alert-#{type}" %>
+      <%= content_tag :div, msg, class: "alert alert-#{type} mb-0" %>
     <% end %>
     <%= yield %>
   </body>
