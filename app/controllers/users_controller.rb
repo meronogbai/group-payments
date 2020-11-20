@@ -16,8 +16,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
-    return if logged_in? && current_user == @user
+    @user = current_user
+    return if logged_in?
 
     flash[:danger] = 'Access not allowed. Please login as this user first'
     redirect_to root_url

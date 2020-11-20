@@ -1,6 +1,11 @@
 <nav class="navbar navbar-dark bg-primary">
-  <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+  <%= link_to burger_path, class: 'navbar-brand' do %>
+    <i class="fas fa-bars"></i>
+  <% end %>
+  <div class="navbar-nav text-white">
+    <%= yield(:title) %>
+  </div>
   <div class="navbar-nav">
-    <%= link_to 'Profile', current_user, class: 'nav-link'%>
+    <%= link_to('Logout', logout_path, method: 'delete', class: 'nav-link') if logged_in? %>
   </div>
 </nav>
