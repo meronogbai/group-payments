@@ -21,6 +21,10 @@ class GroupsController < ApplicationController
     end
   end
 
+  def show
+    @group = Group.includes(:payments, :user).find(params[:id])
+  end
+
   private
 
   def group_params
