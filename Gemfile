@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap'
 gem 'jquery-rails'
 # Store images on cloudinary
-gem 'carrierwave'
 gem 'cloudinary'
 
 group :development, :test do

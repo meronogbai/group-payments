@@ -5,7 +5,6 @@
 </style>
 <div class="bg-primary vh-100 text-white">
   <div class="py-3 text-center">
-    <%#= image_tag((url_for(@user.avatar) if @user.avatar.attached?), class: 'rounded-circle')%>
     <%= display_avatar(@user) %>
     <h1><%= @user.name %></h1>
   </div>
