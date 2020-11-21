@@ -3,7 +3,7 @@ module UsersHelper
     if user.avatar.attached?
       image_tag url_for(user.avatar), class: 'rounded-circle'
     else
-      image_tag 'default-avatar', class: 'rounded-circle'
+      image_tag 'default-avatar.png', class: 'rounded-circle'
     end
   end
 end
