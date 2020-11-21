@@ -6,7 +6,11 @@
       <div class="md-form">
         <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
       </div>
-      <%= f.submit 'Signup', class: 'btn btn-primary mt-3' %>
+      <div class="custom-file my-3">
+        <%= f.file_field :avatar, class: 'custom-file-input' %>
+        <%= f.label :avatar, class: 'custom-file-label' %>
+      </div>
+      <%= f.submit 'Signup', class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
