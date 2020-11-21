@@ -1,11 +1,11 @@
 <div class="card w-75 mx-auto my-3">
   <div class="card-body d-flex justify-content-between">
-    <%= link_to group do %>
+    <%= link_to group, class: 'card-link' do %>
       <%= display_icon(group) %>
       <span><%= group.name %></span>
     <% end %>
   </div>
   <div class="card-footer">
-    <strong>Created by <%= group.user.name %></strong> on <%= group.created_at.strftime("%d %b %Y") %>
+    Created by <strong><%= group.user.name %></strong> on <%= group.created_at.strftime("%d %b %Y") %>
   </div>
 </div>

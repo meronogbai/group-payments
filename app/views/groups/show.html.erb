@@ -1,9 +1,9 @@
 <% provide(:title, @group.name) %>
 <%= render 'layouts/header'%>
 <div class="card">
-  <div class="card-body">
+  <div class="card-body d-flex align-items-center">
     <%= display_icon(@group) %>
-    <h1>Group: <%= @group.name %></h1>
+    <h1 class="ml-3">Group: <%= @group.name %></h1>
   </div>
   <div class="card-footer">
     Created by <%= @group.user.name %> on <%= @group.created_at.strftime("%d %b %Y") %>
