@@ -2,7 +2,7 @@ class GroupsController < ApplicationController
   before_action :logged_in_or_back
 
   def index
-    @groups = Group.includes(:user).all.order(:name).with_attached_icon
+    @groups = Group.includes(:user).paginate(page: params[:page], per_page: 3).order(:name).with_attached_icon
   end
 
   def new
