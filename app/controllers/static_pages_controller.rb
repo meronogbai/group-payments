@@ -1,3 +1,7 @@
 class StaticPagesController < ApplicationController
-  def home; end
+  def home
+    return unless logged_in?
+
+    redirect_to current_user
+  end
 end
