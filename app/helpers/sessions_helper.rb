@@ -8,6 +8,6 @@ module SessionsHelper
   end
 
   def logged_in?
-    !!current_user
+    !current_user.nil?
   end
 end
