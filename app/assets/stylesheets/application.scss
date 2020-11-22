@@ -24,9 +24,10 @@ body {
 .space-for-new {
   padding-bottom: 100px;
 }
-/*------------------------------------
+
+/* ------------------------------------
 - COLOR primary
-------------------------------------*/
+------------------------------------ */
 
 $primary_t1: #3778c2;
 $primary_t2: #2b5f9a;
@@ -179,6 +180,12 @@ button.bg-primary:focus {
   background-color: $primary_t4;
 }
 
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: $success_t4;
+}
+
 .table-hover .table-primary:hover {
   background-color: $primary_t3;
 }
@@ -197,9 +204,9 @@ a.text-primary:focus {
   color: $primary_t2 !important;
 }
 
-/*------------------------------------
+/* ------------------------------------
 - COLOR success
-------------------------------------*/
+------------------------------------ */
 
 $success_t1: #5fb523;
 $success_t2: #488a1a;
@@ -344,12 +351,6 @@ button.bg-success:focus {
   color: $success_text_color_dark_bright;
   background-color: $success_t5;
   border-color: $success_t5;
-}
-
-.table-success,
-.table-success > th,
-.table-success > td {
-  background-color: $success_t4;
 }
 
 .table-hover .table-success:hover {
