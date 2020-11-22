@@ -6,7 +6,7 @@
     <h1 class="ml-3">Group: <%= @group.name %></h1>
   </div>
   <div class="card-footer">
-    Created by <%= @group.user.name %> on <%= @group.created_at.strftime("%d %b %Y") %>
+    Created by <%= @group.user.name %> on <%= creation_date(@group) %>
   </div>
 </div>
 <div class="card mt-3">
@@ -21,7 +21,7 @@
       <strong>$<%= payment.amount%></strong>
     </div>
     <div class="card-footer">
-      Created by <%= payment.author.name %> on <%= payment.created_at.strftime("%d %b %Y") %>
+      Created by <%= payment.author.name %> on <%= creation_date(payment) %>
     </div>
   </div>
 <% end %>

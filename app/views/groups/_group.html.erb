@@ -6,6 +6,6 @@
     <% end %>
   </div>
   <div class="card-footer">
-    Created by <strong><%= group.user.name %></strong> on <%= group.created_at.strftime("%d %b %Y") %>
+    Created by <strong><%= group.user.name %></strong> on <%= creation_date(group) %>
   </div>
 </div>

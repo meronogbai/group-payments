@@ -7,6 +7,6 @@
     <strong>$<%= payment.amount%></strong>
   </div>
   <div class="card-footer">
-    <%= payment.created_at.strftime("%d %b %Y") %>
+    <%= creation_date(payment) %>
   </div>
 </div>
