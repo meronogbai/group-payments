@@ -25,10 +25,10 @@ class PaymentsController < ApplicationController
     if payment.save
       group_id = params[:payment][:group_id]
       PaymentsGroup.create(group_id: group_id, payment_id: payment.id) if group_id
-      flash[:success] = 'Payment added'
+      flash[:success] = ['Payment added']
       redirect_to payments_path
     else
-      flash[:danger] = 'Invalid payment'
+      flash[:danger] = payments.errors.full_messages
       redirect_back(fallback_location: new_payment_path)
     end
   end

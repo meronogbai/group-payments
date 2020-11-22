@@ -5,10 +5,10 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user
       log_in user
-      flash[:success] = 'Successful Login'
+      flash[:success] = ['Successful Login']
       redirect_to user
     else
-      flash[:danger] = 'Invalid Name'
+      flash[:danger] = ["User doesn't exist"]
       redirect_back(fallback_location: root_url)
     end
   end

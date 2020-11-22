@@ -13,10 +13,10 @@ class GroupsController < ApplicationController
     group = Group.new(group_params)
     group.user_id = current_user.id
     if group.save
-      flash[:success] = 'Group added'
+      flash[:success] = ['Group added']
       redirect_to groups_path
     else
-      flash[:danger] = 'Invalid group'
+      flash[:danger] = group.errors.full_messages
       redirect_back(fallback_location: new_group_path)
     end
   end
