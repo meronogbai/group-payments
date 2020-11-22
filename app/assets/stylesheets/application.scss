@@ -13,11 +13,357 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap";
 
 body {
   background-color: #f5f6f8;
   color: #434b54;
   padding-bottom: 100px;
+  font-family: "Lato", sans-serif;
+}
+
+/*------------------------------------
+- COLOR primary
+------------------------------------*/
+
+$primary_t1: #3778c2;
+$primary_t2: #2b5f9a;
+$primary_t3: #aec9e8;
+$primary_t4: #c2d6ed;
+$primary_t5: #1b3d62;
+$primary_t6: #28588e;
+$primary_t7: #2f66a6;
+$primary_t8: #10243a;
+$primary_t9: #d2e1f2;
+
+$primary_shadow: rgba(55, 120, 194, 0.5);
+$primary_text_color_dark_bright: #fff;
+
+.alert-primary {
+  color: $primary_t5;
+  background-color: $primary_t9;
+  border-color: $primary_t4;
+}
+
+.alert-primary hr {
+  border-top-color: $primary_t3;
+}
+
+.alert-primary .alert-link {
+  color: $primary_t8;
+}
+
+.badge-primary {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t1;
+}
+
+.badge-primary[href]:hover,
+.badge-primary[href]:focus {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t2;
+}
+
+.bg-primary {
+  background-color: $primary_t1 !important;
+}
+
+a.bg-primary:hover,
+a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: $primary_t2 !important;
+}
+
+.border-primary {
+  border-color: $primary_t1 !important;
+}
+
+.btn-primary {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t1;
+  border-color: $primary_t1;
+}
+
+.btn-primary:hover {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t7;
+  border-color: $primary_t2;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t1;
+  border-color: $primary_t1;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t2;
+  border-color: $primary_t6;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-outline-primary {
+  color: $primary_t1;
+  background-color: transparent;
+  border-color: $primary_t1;
+}
+
+.btn-outline-primary:hover {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t1;
+  border-color: $primary_t1;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+  color: $primary_t1;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t1;
+  border-color: $primary_t1;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.list-group-item-primary {
+  color: $primary_t5;
+  background-color: $primary_t4;
+}
+
+.list-group-item-primary.list-group-item-action:hover,
+.list-group-item-primary.list-group-item-action:focus {
+  color: $primary_t5;
+  background-color: $primary_t3;
+}
+
+.list-group-item-primary.list-group-item-action.active {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t5;
+  border-color: $primary_t5;
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: $primary_t4;
+}
+
+.table-hover .table-primary:hover {
+  background-color: $primary_t3;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: $primary_t3;
+}
+
+.text-primary {
+  color: $primary_t1 !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: $primary_t2 !important;
+}
+
+/*------------------------------------
+- COLOR success
+------------------------------------*/
+
+$success_t1: #5fb523;
+$success_t2: #488a1a;
+$success_t3: #b2e88d;
+$success_t4: #c1eda2;
+$success_t5: #294e0f;
+$success_t6: #417d18;
+$success_t7: #4f971d;
+$success_t8: #122306;
+$success_t9: #ccf0b3;
+
+$success_shadow: rgba(95, 181, 35, 0.5);
+$success_text_color_dark_bright: #212529;
+
+.alert-success {
+  color: $success_t5;
+  background-color: $success_t9;
+  border-color: $success_t4;
+}
+
+.alert-success hr {
+  border-top-color: $success_t3;
+}
+
+.alert-success .alert-link {
+  color: $success_t8;
+}
+
+.badge-success {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t1;
+}
+
+.badge-success[href]:hover,
+.badge-success[href]:focus {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t2;
+}
+
+.bg-success {
+  background-color: $success_t1 !important;
+}
+
+a.bg-success:hover,
+a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: $success_t2 !important;
+}
+
+.border-success {
+  border-color: $success_t1 !important;
+}
+
+.btn-success {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t1;
+  border-color: $success_t1;
+}
+
+.btn-success:hover {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t7;
+  border-color: $success_t2;
+}
+
+.btn-success:focus,
+.btn-success.focus {
+  box-shadow: 0 0 0 0.2rem $success_shadow;
+}
+
+.btn-success.disabled,
+.btn-success:disabled {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t1;
+  border-color: $success_t1;
+}
+
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t2;
+  border-color: $success_t6;
+}
+
+.btn-success:not(:disabled):not(.disabled):active:focus,
+.btn-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $success_shadow;
+}
+
+.btn-outline-success {
+  color: $success_t1;
+  background-color: transparent;
+  border-color: $success_t1;
+}
+
+.btn-outline-success:hover {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t1;
+  border-color: $success_t1;
+}
+
+.btn-outline-success:focus,
+.btn-outline-success.focus {
+  box-shadow: 0 0 0 0.2rem $success_shadow;
+}
+
+.btn-outline-success.disabled,
+.btn-outline-success:disabled {
+  color: $success_t1;
+  background-color: transparent;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active,
+.btn-outline-success:not(:disabled):not(.disabled).active,
+.show > .btn-outline-success.dropdown-toggle {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t1;
+  border-color: $success_t1;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,
+.btn-outline-success:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-success.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $success_shadow;
+}
+
+.list-group-item-success {
+  color: $success_t5;
+  background-color: $success_t4;
+}
+
+.list-group-item-success.list-group-item-action:hover,
+.list-group-item-success.list-group-item-action:focus {
+  color: $success_t5;
+  background-color: $success_t3;
+}
+
+.list-group-item-success.list-group-item-action.active {
+  color: $success_text_color_dark_bright;
+  background-color: $success_t5;
+  border-color: $success_t5;
+}
+
+.table-success,
+.table-success > th,
+.table-success > td {
+  background-color: $success_t4;
+}
+
+.table-hover .table-success:hover {
+  background-color: $success_t3;
+}
+
+.table-hover .table-success:hover > td,
+.table-hover .table-success:hover > th {
+  background-color: $success_t3;
+}
+
+.text-success {
+  color: $success_t1 !important;
+}
+
+a.text-success:hover,
+a.text-success:focus {
+  color: $success_t2 !important;
 }

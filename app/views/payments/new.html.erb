@@ -15,7 +15,7 @@
         </div>
         <%= f.collection_select(:group_id, Group.all, :id, :name, {include_blank: true}, {class: 'custom-select'}) %>
       </div>
-      <%= f.submit 'Submit Payment', class: 'btn btn-primary mt-3' %>
+      <%= f.submit 'Submit Payment', class: 'btn btn-primary mt-3 p-3' %>
     <% end %>
   </div>
 </div>
