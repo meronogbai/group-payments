@@ -28,7 +28,7 @@ class PaymentsController < ApplicationController
       flash[:success] = ['Payment added']
       redirect_to payments_path
     else
-      flash[:danger] = payments.errors.full_messages
+      flash[:danger] = payment.errors.full_messages
       redirect_back(fallback_location: new_payment_path)
     end
   end
