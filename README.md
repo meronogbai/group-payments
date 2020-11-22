@@ -38,8 +38,9 @@ The data models were constructed according to the following Entity Relationship 
 4. Install required gems `bundle install`
 5. Create database `rails db:create`
 6. Run database migration `rails db:migrate`
-7. Start your server `rails server`
-8. Open the app on your browser by visiting the link `http://localhost:3000`
+7. Seed the database with `rails db:seed`
+8. Start your server `rails server`
+9. Open the app on your browser by visiting the link `http://localhost:3000`
 
 ### Testing
 
