@@ -42,6 +42,23 @@ $primary_t9: #d2e1f2;
 $primary_shadow: rgba(55, 120, 194, 0.5);
 $primary_text_color_dark_bright: #fff;
 
+/* ------------------------------------
+- COLOR success
+------------------------------------ */
+
+$success_t1: #5fb523;
+$success_t2: #488a1a;
+$success_t3: #b2e88d;
+$success_t4: #c1eda2;
+$success_t5: #294e0f;
+$success_t6: #417d18;
+$success_t7: #4f971d;
+$success_t8: #122306;
+$success_t9: #ccf0b3;
+
+$success_shadow: rgba(95, 181, 35, 0.5);
+$success_text_color_dark_bright: #212529;
+
 .alert-primary {
   color: $primary_t5;
   background-color: $primary_t9;
@@ -203,23 +220,6 @@ a.text-primary:hover,
 a.text-primary:focus {
   color: $primary_t2 !important;
 }
-
-/* ------------------------------------
-- COLOR success
------------------------------------- */
-
-$success_t1: #5fb523;
-$success_t2: #488a1a;
-$success_t3: #b2e88d;
-$success_t4: #c1eda2;
-$success_t5: #294e0f;
-$success_t6: #417d18;
-$success_t7: #4f971d;
-$success_t8: #122306;
-$success_t9: #ccf0b3;
-
-$success_shadow: rgba(95, 181, 35, 0.5);
-$success_text_color_dark_bright: #212529;
 
 .alert-success {
   color: $success_t5;
