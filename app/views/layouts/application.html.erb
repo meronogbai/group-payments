@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   </head>
   <body>
-    <% display_flash(flash) %>
+    <% flash.each do |type, msg| %>
+      <ul class="alert alert-<%= type %> mb-0">
+        <% msg.each do |m| %>
+          <%= content_tag :li, m %>
+        <% end %>
+      </ul>
+    <% end %>
     <%= yield %>
   </body>
 </html>
