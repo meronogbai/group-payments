@@ -1,0 +1,16 @@
+<% provide(:title, "Signup") %>
+<%= render 'layouts/header'%>
+<div class="card my-3 text-center">
+  <div class="card-body px-5">
+    <%= form_with model: @user, local: true do |f| %>
+      <div class="md-form">
+        <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
+      </div>
+      <div class="custom-file my-3">
+        <%= f.file_field :avatar, class: 'custom-file-input', direct_upload: true %>
+        <%= f.label :avatar, class: 'custom-file-label' %>
+      </div>
+      <%= f.submit 'Signup', class: 'btn btn-primary p-3' %>
+    <% end %>
+  </div>
+</div>

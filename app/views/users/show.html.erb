@@ -1,0 +1,24 @@
+<div class="bg-primary vh-100 text-white">
+  <div class="py-3 text-center">
+    <%= display_avatar(@user) %>
+    <h1><%= @user.name %></h1>
+  </div>
+  <ul class="list-group my-5">
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-globe"></i>
+      <%= link_to "All my payments", payments_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-map-marker-alt"></i>
+      <%= link_to 'All my external payments', payments_index_no_group_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-user-friends"></i>
+      <%= link_to 'All groups', groups_path, class: 'text-white' %>
+    </li>
+    <li class="list-group-item bg-primary">
+      <i class="fas mr-3 fa-sign-out-alt"></i>
+      <%= link_to 'Logout', logout_path, method: 'delete', class: 'text-white' %>
+    </li>
+  </ul>
+</div>
