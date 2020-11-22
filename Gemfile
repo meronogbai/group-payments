@@ -43,6 +43,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0.0'
   # Hide api keys using dotenv
   gem 'dotenv-rails'
+  # System specs
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
