@@ -1,6 +1,8 @@
 <% provide(:title, "Groups") %>
 <%= render 'layouts/header'%>
-<%= render @groups %>
+<div class="space-for-new">
+  <%= render @groups %>
+</div>
 <div class="d-flex justify-content-center">
   <%= will_paginate @groups, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>

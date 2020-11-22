@@ -6,7 +6,9 @@
     <strong>$<%= total_payments(@payments) %></strong>
   </div>
 </div>
-<%= render @payments %>
+<div class="space-for-new">
+  <%= render @payments %>
+</div>
 <div class="bg-success py-3 fixed-bottom">
   <%= link_to 'New Payment', new_payment_path, type: "button", class: "btn btn-outline-light w-75 mx-auto d-block py-3"%>
 </div>
