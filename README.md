@@ -14,6 +14,10 @@ The app has the following features:
 - Logged in user can view all groups and create a new
 - Logged in user can visit show page of a group which will list all payments associated with it
 
+The data models were constructed according to the following Entity Relationship Diagram(ERD):
+
+![ERD](./docs/_Entity_Relationship_Diagram.png)
+
 ## Built With
 
 - Ruby 2.7.2
@@ -52,6 +56,10 @@ RSpec was used for testing and several test use cases have been created. To test
 - Github: [@meronokbay](https://github.com/meronokbay)
 - Twitter: [@MeronDev](https://twitter.com/MeronDev)
 - Linkedin: [Meron Ogbai](https://linkedin.com/in/meron-ogbai/)
+
+## Acknowledgments
+
+The design of the project was inspired by [Snapscan](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding) by [Gregoire Vella](https://www.behance.net/gregoirevella).
 
 ## 🤝 Contributing
 
