@@ -1,13 +1,15 @@
 class PaymentsController < ApplicationController
   before_action :logged_in_or_back
   def index
-    @payments = Payment.includes(groups: [icon_attachment: :blob]).where('author_id=?', current_user.id).select do |payment|
+    @payments = Payment.includes(groups: [icon_attachment: :blob]).where('author_id=?', current_user.id)
+      .select do |payment|
       payment.groups.any?
     end
   end
 
   def index_no_group
-    @payments = Payment.includes(groups: [icon_attachment: :blob]).where('author_id=?', current_user.id).select do |payment|
+    @payments = Payment.includes(groups: [icon_attachment: :blob]).where('author_id=?', current_user.id)
+      .select do |payment|
       payment.groups.empty?
     end
     render 'index'
