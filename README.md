@@ -2,7 +2,7 @@
 
 > Group Payments is a web app that allows you to group payments with your friends and family.
 
-![App Screenshot](./app_screenshot.png)
+![App Screenshot](./app_screenshot.jpg)
 
 The app has the following features:
 
@@ -26,11 +26,11 @@ The data models were constructed according to the following Entity Relationship 
 
 ## Live Demo
 
-[Group Payments](https://protected-temple-83380.herokuapp.com/)
+[Group Payments](https://group-payments.herokuapp.com/)
 
 ## Getting Started
 
-### Prerequisites
+### Setup & Installation
 
 1. Open Terminal
 2. Clone the repository `git clone https://github.com/meronokbay/group-payments`
