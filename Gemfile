@@ -35,6 +35,10 @@ gem 'cloudinary'
 # Add pagination
 gem 'will_paginate'
 gem 'will_paginate-bootstrap4'
+# resize images
+gem 'image_processing'
+gem 'mini_magick'
+gem 'activestorage-validator'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

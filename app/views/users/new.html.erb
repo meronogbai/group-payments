@@ -7,7 +7,7 @@
         <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
       </div>
       <div class="custom-file my-3">
-        <%= f.file_field :avatar, class: 'custom-file-input', direct_upload: true %>
+        <%= f.file_field :avatar, class: 'custom-file-input', direct_upload: true, accept: "image/jpeg, image/gif, image/png" %>
         <%= f.label :avatar, class: 'custom-file-label' %>
       </div>
       <%= f.submit 'Signup', class: 'btn btn-primary p-3' %>
