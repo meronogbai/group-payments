@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Primary Meta Tags -->
     <title><%= yield(:title).presence || 'Group Payments' %></title>
+    <meta name="title" content="Group Payments">
+    <meta name="description" content="A web app that allows you to group payments with your friends and family.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://group-payments.herokuapp.com/">
+    <meta property="og:title" content="Group Payments">
+    <meta property="og:description" content="A web app that allows you to group payments with your friends and family.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/meronokbay/group-payments/master/app_screenshot.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://group-payments.herokuapp.com/">
+    <meta property="twitter:title" content="Group Payments">
+    <meta property="twitter:description" content="A web app that allows you to group payments with your friends and family.">
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/meronokbay/group-payments/master/app_screenshot.jpg">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
