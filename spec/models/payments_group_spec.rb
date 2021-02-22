@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe PaymentsGroup, type: :model do
   before(:example) do
-    @user = User.create(name: 'test_user')
+    @user = User.create(name: 'test_user', password: '123456')
     @group = Group.create(name: 'haha', user_id: @user.id)
     @payment = Payment.create(name: 'haha', amount: 500, author_id: @user.id)
   end
