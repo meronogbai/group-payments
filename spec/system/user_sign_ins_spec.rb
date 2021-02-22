@@ -6,18 +6,20 @@ RSpec.describe 'UserSignIns', type: :system do
   end
 
   it 'signs in valid user' do
-    user = User.create(name: 'test_user')
+    user = User.create(name: 'test_user', password: '123456')
     visit root_url
     click_link_or_button 'Login'
-    fill_in 'Name', with: user.name
+    fill_in 'session[name]', with: user.name
+    fill_in 'session[password]', with: '123456'
     click_link_or_button 'Login'
     expect(page).to have_css('img.avatar', count: 1)
   end
   it 'signs out logged in user' do
-    user = User.create(name: 'test_user')
+    user = User.create(name: 'test_user', password: '123456')
     visit root_url
     click_link_or_button 'Login'
-    fill_in 'Name', with: user.name
+    fill_in 'session[name]', with: user.name
+    fill_in 'session[password]', with: '123456'
     click_link_or_button 'Login'
     expect(page).to have_css('img.avatar', count: 1)
     click_link_or_button 'Logout'
