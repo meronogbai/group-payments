@@ -28,6 +28,11 @@ The data models were constructed according to the following Entity Relationship 
 
 [Group Payments](https://group-payments.herokuapp.com/)
 
+### Test account
+
+- Name: Admin
+- Password: 123456
+
 ## Getting Started
 
 ### Setup & Installation
