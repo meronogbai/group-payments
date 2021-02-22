@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   before(:example) do
-    @user = User.create(name: 'test_user')
+    @user = User.create(name: 'test_user', password: '123456')
   end
 
   it "doesn't validate group with short name" do

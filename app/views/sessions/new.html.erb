@@ -2,11 +2,14 @@
 <%= render 'layouts/header'%>
 <div class="card my-3 text-center">
   <div class="card-body px-5">
-    <%= form_with url: sessions_path, local: true do |f| %>
-      <div class="md-form">
+    <%= form_with url: login_path, scope: :session, local: true do |f| %>
+      <div class="md-form mb-3">
         <%= f.text_field :name, class: 'form-control', placeholder: 'Name'%>
       </div>
-      <%= f.submit 'Login', class: 'btn btn-primary mt-3 p-3' %>
+      <div class="md-form mb-3">
+        <%= f.password_field :password, class: 'form-control', placeholder: 'Password'%>
+      </div>
+      <%= f.submit 'Login', class: 'btn btn-primary p-3' %>
     <% end %>
   </div>
 </div>

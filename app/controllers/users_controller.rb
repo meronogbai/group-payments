@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       flash[:danger] = @user.errors.full_messages
-      redirect_back(fallback_location: signup_path)
+      render 'new'
     end
   end
 
@@ -26,6 +26,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :avatar)
+    params.require(:user).permit(:name, :password, :avatar)
   end
 end
